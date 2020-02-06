@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using SampleProjectAuctionApp.Models;
 
-namespace SampleProjectAuctionApp
+namespace SampleProjectAuctionApp.Data
 {
     public class RazorPagesAuctionContext : DbContext
     {
@@ -12,5 +13,7 @@ namespace SampleProjectAuctionApp
         {
 
         }
+
+        public DbSet<SampleProjectAuctionApp.Models.AuctionItem> AuctionItem { get; set; }
     }
 }
